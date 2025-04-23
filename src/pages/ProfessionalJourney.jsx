@@ -37,7 +37,7 @@ const ProfessionalJourney = () => {
         location: "On-Site",
         period: "August 2023 - September 2024",
         description: "As a Technical Core Member of the Google Developer Students Club, I contribute to the development of technical projects, collaborate with peers to organize tech talks, workshops, and hackathons, and support the community in learning cutting-edge technologies.",
-        skills: ["JavaScript", "Node.js", "React", "Cloud Computing", "Firebase", "Machine Learning", "API Development", "Event Management"],
+        skills: ["JavaScript", "Node.js", "React", "Firebase", "Machine Learning",  "Event Management"],
         achievements: [
           "Coordinated and led workshops on emerging technologies like React, Node.js, and Firebase.",
           "Organized successful hackathons, fostering innovation and collaboration among students.",

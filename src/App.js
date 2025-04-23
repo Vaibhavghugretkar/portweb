@@ -9,6 +9,7 @@ import MysteryBoard from './pages/MysteryBoard';
 import Contact from './pages/Contact';
 import './styles/globals.css';
 import ProfessionalJourney from './pages/ProfessionalJourney';
+import EducationalJourney from './pages/EducationalJourney';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </section>
         <section>
           <ProfessionalJourney/>
+        </section>
+        <section>
+          <EducationalJourney/>
         </section>
       </div>
   
