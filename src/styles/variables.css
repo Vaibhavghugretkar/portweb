@@ -679,186 +679,222 @@
   }
 }
 
-/* //educational journey */
+/*********************** //educational journey ***************/
 /* Educational Journey Section Styles */
 .education-section {
-  background-color: #050a10;
-  padding: 5rem 2rem;
+  padding: 4rem 0;
+  color: #e0e0e0;
+  background-color: #0d1117;
+  min-height: 100vh;
+  position: relative;
 }
 
 .education-container {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.education-title {
-  font-size: 3.5rem;
+/* Title and description styling */
+.journey-title {
+  font-size: 1.875rem;
   font-weight: 700;
-  color: #32cd32;
+  color: #00ff85;
+  margin-bottom: 0.5rem;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
-.education-subtitle {
-  font-size: 1.1rem;
-  color: #b8c3d4;
+.journey-description {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin-bottom: 3rem;
+  max-width: 36rem;
+  line-height: 1.6;
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 4rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.education-timeline {
+/* Timeline wrapper to contain the timeline items */
+.timeline-wrapper {
   position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 
-.timeline-line {
+/* Centered vertical timeline line */
+.timeline-center-line {
   position: absolute;
+  width: 4px;
+  background-color: #00ff85;
   top: 0;
   bottom: 0;
-  right: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, rgba(50, 205, 50, 0.3), rgba(50, 205, 50, 0.1));
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  border-radius: 2px;
+  z-index: 1;
 }
 
-.timeline-marker {
-  position: absolute;
-  right: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #32cd32;
-  border: 4px solid #050a10;
-  box-shadow: 0 0 12px rgba(50, 205, 50, 0.5);
-}
-
-.education-item {
+.timeline-item {
   position: relative;
+  margin-bottom: 6rem;
   width: 100%;
+  min-height: 100px;
   display: flex;
+}
+
+/* Left positioned items */
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+/* Right positioned items */
+.timeline-item.right {
   justify-content: flex-end;
 }
 
-.education-card {
-  width: 90%;
-  max-width: 650px;
-  background-color: rgba(18, 25, 38, 0.6);
-  border-radius: 12px;
-  padding: 2.5rem;
-  border: 1px solid rgba(50, 205, 50, 0.1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  margin-right: 3rem;
+.timeline-card {
+  width: 45%;
+  background-color: #131b2c;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
-.degree-title {
-  font-size: 1.8rem;
+/* Left side cards stay on left */
+.timeline-item.left .timeline-card {
+  margin-right: auto;
+  text-align: right;
+}
+
+/* Right side cards stay on right */
+.timeline-item.right .timeline-card {
+  margin-left: auto;
+  text-align: left;
+}
+
+.timeline-marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #00ff85;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  z-index: 3;
+  box-shadow: 0 0 0 4px rgba(0, 255, 133, 0.2);
+}
+
+.degree {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
   color: #ffffff;
+}
+
+.institute {
+  font-size: 1.25rem;
   margin-bottom: 1rem;
-}
-
-.institute-name {
-  font-size: 1.4rem;
   font-weight: 500;
-  color: #b8c3d4;
-  margin-bottom: 1.25rem;
+  color: #ffffff;
 }
 
-.education-details {
+.time-period {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: #00ff85;
+  font-weight: 500;
+}
+
+.timeline-item.left .time-period {
+  flex-direction: row-reverse;
+}
+
+.description {
   margin-bottom: 1.5rem;
-}
-
-.period {
-  font-size: 1.1rem;
-  color: #32cd32;
-  font-weight: 500;
-}
-
-.gpa {
-  font-size: 1.1rem;
-  color: #b8c3d4;
-  font-weight: 500;
-}
-
-.education-description {
-  font-size: 1rem;
   line-height: 1.6;
-  color: #b8c3d4;
-  margin-bottom: 1.75rem;
+  color: #a0a0a0;
 }
 
-.education-highlights {
+.highlights {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-item.left .highlights {
+  justify-content: flex-end;
 }
 
 .highlight-tag {
-  display: inline-block;
-  background-color: rgba(50, 205, 50, 0.1);
-  color: #32cd32;
-  font-size: 0.95rem;
-  padding: 0.6rem 1.5rem;
-  border-radius: 50px;
-  border: 1px solid rgba(50, 205, 50, 0.2);
-  transition: all 0.3s ease;
+  background-color: rgba(0, 255, 133, 0.15);
+  color: #00ff85;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid rgba(0, 255, 133, 0.3);
 }
 
-.highlight-tag:hover {
-  background-color: rgba(50, 205, 50, 0.2);
-  transform: translateY(-2px);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .education-title {
-    font-size: 2.5rem;
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .timeline-center-line {
+    left: 30px;
   }
   
-  .education-card {
-    padding: 1.5rem;
-    margin-right: 2rem;
-    width: 85%;
+  .timeline-item {
+    margin-left: 30px;
+    margin-right: 0;
   }
   
-  .degree-title {
-    font-size: 1.5rem;
-  }
-  
-  .institute-name {
-    font-size: 1.2rem;
-  }
-  
-  .education-details {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .education-section {
-    padding: 3rem 1rem;
-  }
-  
-  .education-card {
-    padding: 1.25rem;
-    margin-right: 1.5rem;
-    width: 80%;
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    text-align: left;
   }
   
   .timeline-marker {
-    width: 16px;
-    height: 16px;
-    right: -6px;
+    left: 30px;
   }
+  
+  .timeline-item.left .time-period {
+    flex-direction: row;
+  }
+  
+  .timeline-item.left .highlights {
+    justify-content: flex-start;
+  }
+}
+
+/* //*********anonymous wall**************/
+/* Grid background for the wall */
+.wall-background {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: 
+    linear-gradient(to right, rgba(30, 64, 175, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 64, 175, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Add a fading overlay to the grid */
+.wall-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.5) 100%);
+  pointer-events: none; /* Ensures clicks pass through to the actual wall */
+}
+
+/* Transition for smooth dragging */
+.wall-background * {
+  will-change: transform;
 }

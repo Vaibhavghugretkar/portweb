@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import './styles/globals.css';
 import ProfessionalJourney from './pages/ProfessionalJourney';
 import EducationalJourney from './pages/EducationalJourney';
+import AnonymousWall from './pages/AnonymousWall';
+import ContactSection from './pages/ContactSection';
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
         </section>
         <section>
           <EducationalJourney/>
+        </section>
+        <section>
+          <ContactSection/>
         </section>
       </div>
   
