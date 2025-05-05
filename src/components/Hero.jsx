@@ -19,12 +19,12 @@ const Hero = () => {
             seamless, user-centric experiences that blend innovation with
             functionality.
           </p>
-          <Button text="DOWNLOAD CV →" link="/assets/cv.pdf" />
+          <Button text="DOWNLOAD CV →" link="https://drive.google.com/file/d/1CIafs1dApkkn5ytQCi0X9QZviGNBLNuh/view?usp=sharing" />
           <SocialLinks />
         </div>
         <div className="hero-image">
           <div className="image-container">
-            <img src="/assets/images/4NI22CS243.jpeg" alt="Vaibhav" />
+            <img src="/assets/images/ChatGPT Image May 5, 2025, 11_30_37 AM.png" alt="Vaibhav" />
             <div className="availability-badge">Available for hire</div>
           </div>
         </div>

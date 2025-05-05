@@ -12,6 +12,7 @@ import ProfessionalJourney from './pages/ProfessionalJourney';
 import EducationalJourney from './pages/EducationalJourney';
 import AnonymousWall from './pages/AnonymousWall';
 import ContactSection from './pages/ContactSection';
+import Footer from './pages/Footer';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
         </section>
         <section>
           <ContactSection/>
+        </section>
+        <section>
+          <Footer/>
         </section>
       </div>
   
