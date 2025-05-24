@@ -9,12 +9,12 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Contest Tracker',
-      description: 'MERN-based app to track, filter, and bookmark coding contests with solution links and dark mode support.',
-      image: '/assets/images/contest-tracker.png',
+      title: 'Multilingual Loan Advisor Chatbot',
+      description: 'Multilingual AI-powered chatbot that guides users through loan eligibility, application processes, and financial literacy in their preferred language.',
+      image: '/assets/images/Screenshot (119).png',
       technologies: ['react', 'node', 'express', 'mongodb'],
-      liveDemo: 'https://contest-tracker.example.com',
-      github: 'https://github.com/yourusername/contest-tracker',
+      liveDemo: 'https://sarvasva.onrender.com/',
+      github: 'https://github.com/Vaibhavghugretkar/Sarvasva',
       isNew: true
     },
     {

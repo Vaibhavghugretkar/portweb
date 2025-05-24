@@ -1,17 +1,40 @@
 import React from 'react';
-import { FaFacebook, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'; // Importing React Icons
+import { FaLinkedin, FaGithub, FaTwitter, FaFacebook } from 'react-icons/fa';
 
 const SocialLinks = () => {
   return (
-    <div className="social-links">
-      <a href="https://linkedin.com" className="social-link linkedin" target="_blank" rel="noopener noreferrer">
-        <FaLinkedin />
+    <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+      <a
+        href="https://facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#22c55e] text-black p-3 rounded-full hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-md"
+      >
+        <FaFacebook size={20} />
       </a>
-      <a href="https://github.com" className="social-link github" target="_blank" rel="noopener noreferrer">
-        <FaGithub />
+      <a
+        href="https://linkedin.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#22c55e] text-black p-3 rounded-full hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-md"
+      >
+        <FaLinkedin size={20} />
       </a>
-      <a href="https://twitter.com" className="social-link twitter" target="_blank" rel="noopener noreferrer">
-        <FaTwitter />
+      <a
+        href="https://github.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#22c55e] text-black p-3 rounded-full hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-md"
+      >
+        <FaGithub size={20} />
+      </a>
+      <a
+        href="https://twitter.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#22c55e] text-black p-3 rounded-full hover:scale-110 hover:rotate-6 transition-all duration-300 shadow-md"
+      >
+        <FaTwitter size={20} />
       </a>
     </div>
   );
