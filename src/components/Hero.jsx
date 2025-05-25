@@ -27,6 +27,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
+      <div className="shimmer-background"></div>
       <div className="container">
         <div className="left">
           <p className={`welcome ${isLoaded ? 'show' : ''}`}>WELCOME TO MY PORTFOLIO</p>
@@ -62,7 +63,7 @@ const Hero = () => {
 
       <style jsx>{`
         .hero {
-          width: 100vw;
+          width: 100%;
           min-height: 100vh;
           background: linear-gradient(to right, #0f172a, #080a15);
           color: #e2e8f0;
@@ -70,23 +71,114 @@ const Hero = () => {
           align-items: center;
           justify-content: center;
           padding: 2rem;
+          position: relative;
+          overflow: hidden;
         }
 
-       .container {
-  display: flex;
-  flex-direction: column-reverse; /* 👈 show image first on mobile */
-  align-items: center;
-  gap: 2rem;
-  max-width: 1200px;
-  width: 100%;
-}
+        .shimmer-background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: 
+            radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.4) 0%, transparent 50%),
+            radial-gradient(circle at 40% 40%, rgba(34, 197, 94, 0.2) 0%, transparent 50%);
+          animation: shimmerGlow 4s ease-in-out infinite alternate;
+          pointer-events: none;
+          z-index: 1;
+        }
 
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row-reverse; /* 👈 content left, image right on desktop */
-    justify-content: space-between;
-  }
-}
+        .shimmer-background::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: 
+            conic-gradient(from 0deg at 50% 50%, 
+              transparent 0deg, 
+              rgba(34, 197, 94, 0.1) 60deg, 
+              rgba(16, 185, 129, 0.2) 120deg, 
+              transparent 180deg, 
+              rgba(34, 197, 94, 0.15) 240deg, 
+              transparent 360deg);
+          animation: shimmerRotate 8s linear infinite;
+          opacity: 0.6;
+        }
+
+        .shimmer-background::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: 
+            linear-gradient(45deg, 
+              transparent 30%, 
+              rgba(34, 197, 94, 0.1) 50%, 
+              transparent 70%);
+          animation: shimmerWave 3s ease-in-out infinite;
+          transform: translateX(-100%);
+        }
+
+        @keyframes shimmerGlow {
+          0% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.7;
+            transform: scale(1.05);
+          }
+          100% {
+            opacity: 0.4;
+            transform: scale(1.02);
+          }
+        }
+
+        @keyframes shimmerRotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        @keyframes shimmerWave {
+          0% {
+            transform: translateX(-100%) skewX(-15deg);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(100%) skewX(-15deg);
+            opacity: 0;
+          }
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 2rem;
+          max-width: 1200px;
+          width: 100%;
+          position: relative;
+          z-index: 2;
+        }
+
+        @media (min-width: 768px) {
+          .container {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+          }
         }
 
         .left {
