@@ -23,10 +23,10 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="/about" className="text-gray-300 hover:text-green-400 transition font-medium">About</a>
-          <a href="/projects" className="text-gray-300 hover:text-green-400 transition font-medium">Projects</a>
-          <a href="/contact" className="text-gray-300 hover:text-green-400 transition font-medium">Contact</a>
-          <a href="/quicklinks" className="text-gray-300 hover:text-green-400 transition font-medium">Quick Links</a>
+          <a href="#about" className="text-gray-300 hover:text-green-400 transition font-medium">About</a>
+          <a href="#projects" className="text-gray-300 hover:text-green-400 transition font-medium">Projects</a>
+          <a href="#contacts" className="text-gray-300 hover:text-green-400 transition font-medium">Contact</a>
+          <a href="#journey" className="text-gray-300 hover:text-green-400 transition font-medium">Journey</a>
           <a href="#contact" className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow transition">
             Hire me!
           </a>
@@ -41,12 +41,12 @@ const Navbar = () => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden px-4 pb-4 flex flex-col space-y-3 bg-[#0a192f]"
+           className="md:hidden px-4 pb-4 flex flex-col items-center space-y-3 bg-[#0a192f]"
+
           >
-            <a href="/about" className="text-gray-300 hover:text-green-400 transition font-medium">About</a>
-            <a href="/projects" className="text-gray-300 hover:text-green-400 transition font-medium">Projects</a>
-            <a href="/contact" className="text-gray-300 hover:text-green-400 transition font-medium">Contact</a>
-            <a href="/quicklinks" className="text-gray-300 hover:text-green-400 transition font-medium">Quick Links</a>
+            <a href="#about" className="text-gray-300 hover:text-green-400 transition font-medium">About</a>
+            <a href="#projects" className="text-gray-300 hover:text-green-400 transition font-medium">Projects</a>
+            <a href="#journey" className="text-gray-300 hover:text-green-400 transition font-medium">Journey</a>
             <a href="#contact" className="px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg shadow transition w-fit">
               Hire me!
             </a>

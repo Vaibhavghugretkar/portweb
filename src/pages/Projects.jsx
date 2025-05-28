@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaReact, FaNodeJs, FaGithub } from 'react-icons/fa';
-import { SiExpress, SiMongodb } from 'react-icons/si';
+import { SiExpress, SiMongodb, SiPython, SiFirebase} from 'react-icons/si';
 
 const Projects = () => {
   const [visibleProjects, setVisibleProjects] = useState(new Set());
@@ -27,32 +27,30 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Contest Tracker',
-      description: 'MERN-based app to track, filter, and bookmark coding contests with solution links and dark mode support.',
+      title: 'Credibot',
+      description: 'A multilingual chatbot for loan assistance and guidance, featuring real-time data processing and user-friendly interface.',
       image: '/assets/images/Screenshot (119).png',
-      technologies: ['react', 'node', 'express', 'mongodb'],
+      technologies: ['react', 'node', 'express',"python"],
       liveDemo: 'https://sarvasva.onrender.com/',
       github: 'https://github.com/Vaibhavghugretkar/Sarvasva',
-      // isNew: true
     },
     {
       id: 2,
-      title: 'Customer Engagement Dashboard',
-      description: 'Real-time analytics dashboard with engagement tracking, retention insights, and dynamic filtering.',
-      image: '/assets/images/engagement-dashboard.png',
+      title: 'Customer Relation Dashboard',
+      description: 'CRM platform with contact management, sales tracking, real-time analytics, user authentication, and workflow automation.',
+      image: '/assets/images/crm.png',
       technologies: ['react', 'node', 'express', 'mongodb'],
       liveDemo: 'https://engagement-dashboard.example.com',
       github: 'https://github.com/yourusername/engagement-dashboard',
-      // isNew: true
     },
     {
       id: 3,
-      title: 'Video Streaming App',
-      description: 'A feature-rich video streaming platform with real-time search, user authentication, and video recommendations.',
-      image: '/assets/images/video-streaming.png',
-      technologies: ['react', 'node', 'express', 'mongodb'],
-      liveDemo: 'https://video-streaming.example.com',
-      github: 'https://github.com/yourusername/video-streaming',
+      title: 'TripTak',
+      description: 'Travel platform offering real-time search,personalized trip recommendations, and itinerary management.',
+      image: '/assets/images/triptak.png',
+      technologies: ['react', 'node', 'firebase'],
+      liveDemo: 'https://triptakk.netlify.app',
+      github: 'https://github.com/Vaibhavghugretkar/TripTak',
       isNew: false
     }
   ];
@@ -63,7 +61,9 @@ const Projects = () => {
       react: { icon: FaReact, color: 'text-cyan-400', bg: 'bg-cyan-400/10' },
       node: { icon: FaNodeJs, color: 'text-green-500', bg: 'bg-green-500/10' },
       express: { icon: SiExpress, color: 'text-gray-300', bg: 'bg-gray-300/10' },
-      mongodb: { icon: SiMongodb, color: 'text-green-400', bg: 'bg-green-400/10' }
+      mongodb: { icon: SiMongodb, color: 'text-green-400', bg: 'bg-green-400/10' },
+      python: { icon: SiPython, color: 'text-blue-500', bg: 'bg-blue-500/10' },
+      firebase: { icon: SiFirebase, color: 'text-yellow-400', bg: 'bg-yellow-400/10' }
     };
 
     return (
@@ -89,7 +89,7 @@ const Projects = () => {
   };
 
   return (
-    <section className="min-h-screen bg-[#0d1117] py-20 px-4 relative overflow-hidden">
+    <section className="min-h-screen bg-[#0d1117] py-20 px-4 relative overflow-hidden" id="projects">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 via-transparent to-blue-500/5"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -98,7 +98,7 @@ const Projects = () => {
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl text-green-400 font-bold  mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-6xl text-green-400 font-bold  mb-6 tracking-tight">
             Featured 
             <span className="text-green-400 ml-4">
               Projects
