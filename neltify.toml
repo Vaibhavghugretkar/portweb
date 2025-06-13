@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist" # For Vite or CRA it might be "build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
